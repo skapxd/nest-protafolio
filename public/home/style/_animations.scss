@@ -1,0 +1,34 @@
+.fade-in {
+	animation: fadeIn 0.3s ease;
+  	opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+  	opacity: 0;
+  }
+  to {
+ 	opacity: 1;
+  }
+}
+
+// 
+
+// span.ripple {
+//   position: absolute; /* The absolute position we mentioned earlier */
+//   border-radius: 50%;
+//   // transform: scale(0);
+//   height: 50px!important;
+//   width: 50px!important;
+//   // animation: ripple 600ms linear;
+//   background-color: red!important;
+//   // background-color: rgba(255, 255, 255, 0.7);
+//   z-index: 10000000;
+// }
+
+// @keyframes ripple {
+//   to {
+//     transform: scale(4);
+//     opacity: 0;
+//   }
+// }

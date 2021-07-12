@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+$font-family: 'Montserrat'
+
+@import animations
+@import movil
+@import desktop
+// @use animations
+
+html 
+  scroll-behavior: smooth
+  // display: none
+  overflow-y: auto
+  color: #fff
+  transition: color 0.8s ease
+  &:hover
+      // color: #0004
+  &::-webkit-scrollbar 
+      border-radius: 1vw 
+      width: 0.5vw
+      &-thumb
+          border-radius: 5vw 
+          box-shadow: inset 0 0 0 1vw
+      &-button
+          width: 0
+          height: 0
+          display: none;
+  
+
+body 
+  display: flex
+  flex-direction: column
+  background: #27272B
+
+*
+  font-family: $font-family
+  text-decoration: none
+  border: none;
+  outline: none 
+
+input 
+  border: none;
+  outline: none 
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover, 
+  &:-webkit-autofill:focus, 
+  &:-webkit-autofill:active
+    color: #FFF
+    -webkit-box-shadow: 0 0 0 30px #27272B inset !important;
+
+
+.expanded-1
+  flex: 1

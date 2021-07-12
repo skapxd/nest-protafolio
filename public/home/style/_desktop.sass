@@ -1,0 +1,440 @@
+
+@media screen and ( min-width: 801px )
+
+  
+  @mixin title( $color : #FFF,  $font-weight: 800,  $font-size: 5vw )
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+
+    
+  @mixin sub-title( $margin-top: 2vw, $color: #FFF, $font-weight: 300, $line-height: 1.4, $font-size: 1.6vw )
+    margin-top: $margin-top
+    color: $color
+    font-weight: $font-weight
+    line-height: $line-height
+    font-size: $font-size
+
+  @mixin btn()
+    cursor: pointer
+    // margin: 0 auto
+    height: 4vw
+    width: 24vw
+    border-radius: 10vw
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(92.07deg, #707EFF -38.89%, #882FFA 96.19%);
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      height: 4vw
+      width: 24vw
+      border-radius: 10vw
+      transition: opacity 0.7s ease;
+      opacity: 0
+      background: linear-gradient(92.07deg, #FF0513  -38.89%, #707EFF 96.19%);
+    
+    &:hover:before
+      background: linear-gradient(92.07deg, #FF0513  -38.89%, #707EFF 96.19%);
+      opacity: 1
+    
+    & > p
+      z-index: 200
+      color: #FFF
+      font-weight: 600
+      font-size: 1.3vw
+
+  #movil
+    display: none
+
+  
+  #desktop
+    margin-bottom: 5vw
+    
+  .popup
+    display: flex
+    flex-direction: column
+    position: fixed
+    width: 100vw
+    height: 100vh
+    z-index: 1000
+    justify-content: center
+    align-items: center
+
+    &__bg
+      background: #0004
+      width: 100vw
+      height: 100vh
+      position: absolute
+
+    &__wrapper
+      height: 32vw
+      width: 30vw
+      border-radius: 2vw
+      z-index: 2000
+      box-shadow: 2vw 2vw 3vw rgba(0, 0, 0, 0.6)
+      background: #FFF
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      &__img 
+        margin-top: 4vw
+        margin-bottom: 2vw
+        width: 7vw
+
+      &__title
+        text-align: center
+        color: #27272B
+        font-weight: 700
+        font-size: 1.5vw
+        margin-bottom: 2vw
+
+      &__sub-title
+        text-align: center
+        color: #27272B
+        font-weight: 500
+        font-size: 1.3vw
+        margin-bottom: 3vw
+
+      &__btn
+        @include btn
+
+
+
+  .header
+      margin: 2.5vw 8vw
+      display: flex
+      flex-direction: row
+      align-content: center
+
+      &__logo
+          width: 9vw
+
+      &__option
+          font-weight: 400
+          margin: 0 2vw
+          display: flex
+          flex-direction: row
+          align-content: center
+          line-height: 1 
+          color: #FFF
+          font-size: 1.4vw
+          flex-wrap: wrap
+          cursor: pointer
+          transition: color 0.3s ease
+          &:hover
+              color: #FF0513
+
+  .aplicaciones-que-impactan
+      display: flex
+      flex-direction: row
+      margin: 4vw 8vw
+      margin-bottom: 0
+
+      &__col
+          margin-top: 3vw
+          display: flex
+          flex-direction: column
+
+          &__title
+              font-size: 4vw
+              font-weight: 800
+              color: #FFF
+              margin-bottom: 3vw
+              line-height: 1.1
+
+          &__sub-title
+              font-size: 1.7vw
+              line-height: 1.3
+              font-weight: 300
+              color: #FFF
+              margin-bottom: 3vw
+
+
+          &__btn-contacto
+              @include btn
+            
+          & > img 
+            height: 40vw  
+            margin-top: -6vw
+
+  .splide
+    margin-top: -1.5vw
+
+
+  .splide__slide
+    display: flex
+    flex-direction: column
+    margin: 1.5vw !important
+    cursor: grab
+    &:active
+      cursor: grabbing
+    &__img
+      background: linear-gradient(92.07deg, #882FFA  -38.89%, #707EFF 96.19%);
+      height: 18vw
+      width: 18vw
+      box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.5)
+
+    &__title
+      margin-top: 1vw
+      color: #FFF
+      font-size: 1.5vw
+      line-height: 1.5
+      font-weight: 600
+    
+    &__sub-title
+      margin-top: 1vw
+      color: #FFF
+      font-size: 1vw
+      line-height: 1.5
+      font-weight: 400
+
+
+  .splide__pagination
+    top: 28vw
+    bottom: -1vw
+
+  .divider
+    height: 2vw
+    width: 8vw
+    background: #FFF
+    margin: 5vw 0
+
+  .quien-soy
+    display: flex
+    flex-direction: row
+    margin: 0vw 8vw
+
+    &__col
+      display: flex
+      flex-direction: column
+
+      &__title
+        @include title
+
+      &__sub-title
+        @include sub-title 
+
+      &__attr-row
+        display: flex
+        flex-direction: row
+
+        &__item
+          display: flex
+          flex-direction: column
+          margin-right: 4vw
+          margin-top: 3vw
+
+          &__title
+            font-size: 3vw
+            font-weight: 800
+            color: #FFF
+
+            
+          &__sub-title
+            line-height: 1.3
+            margin-top: 0.5vw
+            font-size: 1.4vw
+            font-weight: 300
+            color: #FFF
+        
+    &__img
+      margin-top: -7vw
+      width: 35vw
+
+
+
+  .tecnologias
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin: 0vw 8vw
+    
+    
+    &__col
+      display: flex
+      flex-direction: column
+
+
+      &__title
+        @include title
+
+      &__sub-title
+        @include sub-title
+
+    &__list-items
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+
+        margin-top: 3vw
+        // background: #000
+        width: 40vw
+        
+        &__item
+
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 6vw
+            width: 6vw
+            margin-right: 2vw
+            margin-bottom: 3vw
+            border-radius: 0.5vw
+            background: #FFF
+            padding: 1vw
+                
+    &__img
+        width: 32vw
+
+
+  .servicios
+    display: flex
+    flex-direction: column
+    margin: 0vw 8vw
+  
+    &__title
+      @include title
+
+    
+    &__sub-title
+      @include sub-title
+      
+
+    &__row-servicios
+      display: flex
+      flex-direction: row
+
+      &__item
+        display: flex
+        flex-direction: column
+
+        &__img
+          margin-top: 4vw
+          width: 22vw
+          margin-right: 6vw
+
+        &__title
+          margin-top: 1vw
+          font-size: 1.5vw
+          font-weight: 600
+          color: #FFF 
+
+          
+        &__sub-title
+          margin-top: 1vw
+          font-size: 1.3vw
+          font-weight: 300
+          color: #FFF  
+          
+
+
+  .active-2
+    background: #FFF
+    
+  .contacto
+    display: flex
+    flex-direction: column
+    margin: 0vw 8vw
+    
+    &__title
+      @include title
+
+    &__sub-title
+      @include sub-title
+      margin-bottom: 2vw
+
+    &__row-input
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      margin-top: 2vw
+
+      &__input-group
+        display: flex
+        flex: 1
+        flex-direction: column
+        height: 4vw
+        margin-right: 2vw
+
+        &__input
+          background: #0000
+          color: #FFF
+          font-family: $font-family
+          border-bottom: 1px solid #FFF
+          font-size: 1.5vw
+          padding-bottom: 0.5vw
+          padding-left: 0.5vw
+          caret-color: #FFF
+
+          &::placeholder 
+            color: #FFF4
+            font-size: 1.3vw
+            opacity: 0
+            transition: opacity 0.3s ease
+
+          &:focus::placeholder 
+            color: #FFF4
+            opacity: 1
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover, 
+          &:-webkit-autofill:focus, 
+          &:-webkit-autofill:active,
+          &:-internal-autofill-selected
+            -webkit-text-fill-color: #FFF !important;
+            font-family: $font-family
+        
+        &__label
+          margin: -2.3vw 0 0 1vw 
+          color: #FFF
+          font-size: 1.5vw
+          transition: margin 0.3s ease, font-size 0.3s ease, color 0.3s ease
+
+        &__submit
+          @include btn
+          margin: 0 auto
+
+
+  .active
+    margin: -3.5vw 0 0 1vw 
+    font-size: 1vw
+    color: #FFFa
+
+
+
+  .redes
+    display: flex
+    flex-direction: column
+    margin: 0vw 8vw
+    
+    &__title
+      @include title
+      margin-bottom: 2vw
+
+    &__group
+      display: flex
+      flex-direction: row
+      align-items: center
+      margin-top: 1.5vw
+      // margin-bottom: 5vw
+
+
+      &__icon
+        height: 2vw
+        width:  2vw
+        font-size: 1.4vw
+        font-weight: 500
+        color: #868686
+        margin-right: 1vw
+      
+      &__text
+        font-size: 1.6vw
+        font-weight: 500
+        color: #FFF
+        letter-spacing: 0.15vw

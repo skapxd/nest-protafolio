@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "34.139.230.162",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "portafolio",
+            "database": "portafolio",
+            "username": "skapxd",
+            "password": "zIeFNkhCzGEl9Bir"
+        }
+    ],
+    "liveSassCompile.settings.formats": [
+    
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ],
+}

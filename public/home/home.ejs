@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/splide.min.css">
+    <link rel="stylesheet" href="/home/style/home.css">
+
+
+    <meta name="keywords" content="Portafolio SkapxD" />
+    <meta name="description" content="Cotiza un proyecto ambicioso que tengas en mente al mejor precio" />
+
+    <meta property="og:title" content="Skapxd" />
+    <meta property="og:type" content="Cotiza un proyecto ambicioso que tengas en mente al mejor precio" />
+    <meta property="og:url" content="https://skapxd.dev/" />
+    <meta property="og:image" content="/root/img/og.png" />
+
+
+    <title>Skapxd</title>
+</head>
+
+<body>
+
+    <div id="popup"></div>
+
+    <div id="desktop">
+
+        <header class="header">
+
+            <img class="header__logo" src="/assets/brand/logo.svg" alt="skapxD logo">
+
+            <div class="expanded-1"></div>
+
+            <a href="#¿Quien-soy?" class="header__option">¿Quien soy? </a>
+            <a href="#Proyectos" class="header__option">Proyectos </a>
+            <a href="#Servicios" class="header__option">Servicios </a>
+            <a href="#Contacto" class="header__option">Contacto </a>
+
+        </header>
+
+        <div class="aplicaciones-que-impactan">
+
+            <div class="aplicaciones-que-impactan__col">
+
+                <h2 class="aplicaciones-que-impactan__col__title">
+                    Aplicaciones <br> que impactan
+                </h2>
+
+                <div class="aplicaciones-que-impactan__col__sub-title">
+                    Productos digitales para distintos rubros como:<br>
+                    Delivery, Banca, Salud, Corporativo y
+                    Entretenimiento
+                </div>
+
+                <a id="Proyectos" href="#Contacto" class="aplicaciones-que-impactan__col__btn-contacto">
+                    <p>
+                        Contáctame
+                    </p>
+                </a>
+
+
+            </div>
+
+            <div class="aplicaciones-que-impactan__col">
+                <img src="/assets/brand/hand-and-phone.png" alt="hand and phone">
+            </div>
+
+        </div>
+
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <%- include('./components/list_projects.ejs') %>
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider" id="¿Quien-soy?"></div>
+
+        <div class="quien-soy">
+
+            <div class="quien-soy__col">
+                <h2 class="quien-soy__col__title">¿Quien soy?</h2>
+
+                <p class="quien-soy__col__sub-title">
+                    Un gusto mi nombre es Manuel Londoño, soy un <br>
+                    Desarrollador de Software Colombiano. Soy especialista <br>
+                    en desarrollado web y mobile. <br>
+                    Me dedico exclusivamente a crear productos <br>
+                    digitales para todo Latinoamérica.
+                </p>
+
+                <div class="quien-soy__col__attr-row">
+
+                    <div class="quien-soy__col__attr-row__item">
+                        <div class="quien-soy__col__attr-row__item__title">2</div>
+                        <div class="quien-soy__col__attr-row__item__sub-title">años de <br> experiencia</div>
+                    </div>
+
+                    <div class="quien-soy__col__attr-row__item">
+                        <div class="quien-soy__col__attr-row__item__title">+ 6</div>
+                        <div class="quien-soy__col__attr-row__item__sub-title">Proyectos <br> realizados</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <img src="/assets/brand/photo.png" class="quien-soy__img" alt="Manuel Londoño">
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="tecnologias">
+
+            <div class="tecnologias__col">
+
+                <h2 class="tecnologias__col__title">Tecnologías</h2>
+
+                <p class="tecnologias__col__sub-title">
+                    Mi objetivo es que los productos creados siempre <br>
+                    estén realizados con las tecnologías más actuales y <br>
+                    robustas del mercado
+                </p>
+
+                <div class="expanded-1"></div>
+
+                <div class="tecnologias__list-items">
+
+                    <%- include('./components/list_technology.ejs') %>
+
+                </div>
+
+            </div>
+
+            <img src="/assets/brand/tecnology.png" class="tecnologias__img" alt="tecnology">
+
+        </div>
+
+        <div class="divider" id="Servicios"></div>
+
+        <div class="servicios">
+
+            <h2 class="servicios__title">Servicios</h2>
+
+            <p class="servicios__sub-title">
+                Estos son los servicios que ofrezco. <br>
+                Todo personalizable y escalable de acuerdo a los requerimientos de tu proyecto.
+            </p>
+
+            <div class="servicios__row-servicios">
+
+                <div class="servicios__row-servicios__item">
+
+                    <img src="/assets/brand/web.png" class="servicios__row-servicios__item__img" alt="web">
+
+                    <div class="servicios__row-servicios__item__title">Desarrollo Web</div>
+
+                    <div class="servicios__row-servicios__item__sub-title">Corporativo</div>
+
+                </div>
+
+                <div class="servicios__row-servicios__item">
+
+                    <img src="/assets/brand/movil.png" class="servicios__row-servicios__item__img" alt="web">
+
+                    <div class="servicios__row-servicios__item__title">Desarrollo Móvil</div>
+
+                    <div class="servicios__row-servicios__item__sub-title">iOS y Android</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="divider" id="Contacto"></div>
+
+        <div class="contacto">
+
+            <h2 class="contacto__title">Contacto</h2>
+
+            <p class="contacto__sub-title">
+                ¿Te gustaría saber cuánto costaría el desarollo de tu proyecto? <br>
+                Puedes solicitar una cotización aquí.
+            </p>
+
+            <form id="formDesktop">
+
+                <div class="contacto__row-input">
+
+                    <div class="contacto__row-input__input-group">
+
+                        <input class="contacto__row-input__input-group__input" type="text" required
+                            placeholder="Franken Luna" id="nombre" name="nombre">
+
+                        <label class="contacto__row-input__input-group__label" for="nombre">
+                            Nombre *
+                        </label>
+
+
+                    </div>
+
+                    <div class="contacto__row-input__input-group">
+
+                        <input class="contacto__row-input__input-group__input" required placeholder="Franken@Luna.com"
+                            type="email" id="correo" name="correo">
+                        <label class="contacto__row-input__input-group__label" for="correo">
+                            Correo *
+                        </label>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="contacto__row-input">
+
+                    <div class="contacto__row-input__input-group">
+
+                        <input class="contacto__row-input__input-group__input" required type="tel"
+                            placeholder="+00 000-0000" id="telefono" name="telefono">
+
+                        <label class="contacto__row-input__input-group__label" for="telefono">
+                            Teléfono *
+                        </label>
+
+
+                    </div>
+
+                    <div class="contacto__row-input__input-group">
+
+                        <input class="contacto__row-input__input-group__input" placeholder="Franken Luna Company S.A"
+                            type="text" id="nombre-empresa" name="nombre-empresa">
+
+                        <label class="contacto__row-input__input-group__label" for="nombre-empresa">
+                            Nombre de empresa
+                        </label>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="contacto__row-input">
+
+                    <div class="contacto__row-input__input-group">
+
+                        <input class="contacto__row-input__input-group__input" type="text" id="mensaje" name="mensaje"
+                            placeholder="Si, veras....">
+
+                        <label class="contacto__row-input__input-group__label" for="mensaje">
+                            ¿Quieres contarme algo más?
+                        </label>
+
+
+                    </div>
+
+                </div>
+
+                <button class="contacto__row-input__input-group__submit" type="submit">
+                    <p>
+                        Enviar datos
+                    </p>
+                </button>
+            </form>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="redes">
+
+            <h2 class="redes__title">
+                Estamos a un click <br>
+                de distancia
+            </h2>
+
+            <!-- <h3 class="redes__email-title">
+                Contacto
+            </h3>
+
+            <h3 class="redes__email-body">
+                Contactame@SkapxD.dev
+            </h3> -->
+
+            
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/correo.svg" 
+                    class="redes__group__icon"
+                    alt="correo">
+
+                <h3 class="redes__group__text">
+                    Contactame@SkapxD.dev
+                </h3>
+            </div>
+
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/whatsapp.svg" 
+                    class="redes__group__icon"
+                    alt="whatsapp">
+
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=57314375027" class="redes__group__text">
+                    +57 314 375 0278
+                </a>
+            </div>
+
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/telegram.svg" 
+                    class="redes__group__icon"
+                    alt="telegram">
+
+                <a target="_blank" href="https://t.me/skapxd" class="redes__group__text">
+                    @skapxd
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="movil">
+
+        <header class="header">
+
+            <img class="header__logo" src="/assets/brand/logo.svg" alt="skapxD logo">
+
+            <div class="expanded-1"></div>
+
+        </header>
+
+        <div class="aplicaciones-que-impactan">
+
+            <h2 class="aplicaciones-que-impactan__title">
+                Aplicaciones <br> que impactan
+            </h2>
+
+            <img src="/assets/brand/hand-and-phone.png" class="aplicaciones-que-impactan__img" alt="hand and phone">
+
+
+
+
+        </div>
+
+
+        <div class="splide" id="Proyectos-2">
+            <div class="splide__track">
+                <ul class="splide__list">
+
+                    <%- include('./components/list_projects.ejs') %>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="quien-soy">
+
+            <div class="quien-soy__title">¿Quien soy?</div>
+
+            <p class="quien-soy__sub-title">
+                Mi nombre es Manu Londoño, soy <br>
+                desarrollador web y mobile.
+                Me dedico exclusivamente a crear <br>
+                productos digitales para todo <br>
+                Latinoamérica.
+            </p>
+
+            <div class="quien-soy__row">
+
+                <img src="/assets/brand/photo.png" class="quien-soy__row__img" alt="Manuel Londoño">
+
+
+                <div class="quien-soy__row__col">
+
+                    <div class="quien-soy__row__col__item">
+                        <div class="quien-soy__row__col__item__title">
+                            2
+                        </div>
+
+                        <div class="quien-soy__row__col__item__sub-title">
+                            años de <br>
+                            experiencia
+                        </div>
+                    </div>
+
+                    <div class="quien-soy__row__col__item">
+                        <div class="quien-soy__row__col__item__title">
+                            + 6
+                        </div>
+
+                        <div class="quien-soy__row__col__item__sub-title">
+                            proyectos <br>
+                            exitosos
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+
+        <div class="tecnologias">
+
+            <div class="tecnologias__title">
+                Tecnologías
+            </div>
+
+            <div class="tecnologias__sub-title">
+                Mi objetivo es que los productos <br>
+                creados siempre estén realizados con <br>
+                las tecnologías más actuales y robustas.
+            </div>
+
+            <div class="tecnologias__list-items">
+
+                <%- include('./components/list_technology.ejs') %>
+
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="servicios">
+
+            <h2 class="servicios__title">Servicios</h2>
+
+            <p class="servicios__sub-title">
+                Para tu empresa o startup. <br>
+                Calidad y Agilidad.
+            </p>
+
+            <div class="servicios__row-servicios">
+
+                <div class="servicios__row-servicios__item">
+
+                    <img src="/assets/brand/web.png" class="servicios__row-servicios__item__img" alt="web">
+
+                    <div class="servicios__row-servicios__item__title">Desarrollo Web</div>
+
+                    <div class="servicios__row-servicios__item__sub-title">Corporativo</div>
+
+                </div>
+
+                <div class="servicios__row-servicios__item">
+
+                    <img src="/assets/brand/movil.png" class="servicios__row-servicios__item__img" alt="web">
+
+                    <div class="servicios__row-servicios__item__title">Desarrollo Móvil</div>
+
+                    <div class="servicios__row-servicios__item__sub-title">iOS y Android</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="contacto">
+
+
+            <h2 class="contacto__title">Contacto</h2>
+
+            <p class="contacto__sub-title">
+                ¿Te gustaría saber cuanto costaría el <br>
+                desarrollo de tu proyecto? <br>
+                Puedes solicitar una cotización aquí
+            </p>
+
+
+            <form id="formMovil" class="contacto__form">
+
+
+                <div class="contacto__form__input-group">
+
+                    <input class="contacto__form__input-group__input" type="text" required placeholder="Franken Luna"
+                        name="nombre" id="nombreM">
+
+                    <label class="contacto__form__input-group__label" for="nombreM">
+                        Nombre *
+                    </label>
+
+                </div>
+
+                <div class="contacto__form__input-group">
+
+                    <input class="contacto__form__input-group__input" required placeholder="Franken@Luna.com"
+                        type="email" name="correo" id="correoM">
+
+                    <label class="contacto__form__input-group__label" for="correoM">
+                        Correo *
+                    </label>
+                </div>
+
+
+                <div class="contacto__form__input-group">
+
+                    <input class="contacto__form__input-group__input" required type="tel" placeholder="+00 000-0000"
+                        name="telefono" id="telefonoM">
+
+                    <label class="contacto__form__input-group__label" for="telefonoM">
+                        Teléfono *
+                    </label>
+
+                </div>
+
+                <div class="contacto__form__input-group">
+
+                    <input class="contacto__form__input-group__input" placeholder="Franken Luna Company S.A" type="text"
+                        name="nombre-empresa" id="nombre-empresaM">
+
+                    <label class="contacto__form__input-group__label" for="nombre-empresaM">
+                        Nombre de empresa
+                    </label>
+                </div>
+
+
+                <div class="contacto__form__input-group">
+
+                    <input class="contacto__form__input-group__input" type="text" name="mensaje" id="mensajeM"
+                        placeholder="Si, veras....">
+
+                    <label class="contacto__form__input-group__label" for="mensajeM">
+                        ¿Quieres contarme algo más?
+                    </label>
+
+                </div>
+
+                <button class="contacto__form__input-group__submit" type="submit">
+                    <p>
+                        Enviar datos
+                    </p>
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <div class="divider"></div>
+
+
+        <div class="redes">
+
+            <h2 class="redes__title">
+                Estamos a un click <br>
+                de distancia
+            </h2>
+
+
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/correo.svg" 
+                    class="redes__group__icon"
+                    alt="correo">
+
+                <h3 class="redes__group__text">
+                    Contactame@SkapxD.dev
+                </h3>
+            </div>
+
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/whatsapp.svg" 
+                    class="redes__group__icon"
+                    alt="whatsapp">
+
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=57314375027" class="redes__group__text">
+                    +57 314 375 0278
+                </a>
+            </div>
+
+            <div class="redes__group" >
+
+                <img src="/assets/contacto/telegram.svg" 
+                    class="redes__group__icon"
+                    alt="telegram">
+
+                <a target="_blank" href="https://t.me/skapxd" class="redes__group__text">
+                    @skapxd
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="/assets/splide.min.js"></script>
+    <script src="/home/js/ripple.js"></script>
+    <script src="/home/js/popup.js"></script>
+
+    <script src="/home/js/home.js"></script>
+</body>
+
+</html>
