@@ -1,10 +1,18 @@
 import nodemailer from 'nodemailer';
 import { Injectable } from '@nestjs/common';
-import { PortafolioDto } from '../portafolio/dto/create-portafolio.dto';
-import { passMail, userMail } from 'src/config/configuration';
+// import { PortafolioDto } from '../portafolio/dto/create-portafolio.dto';
+// import { passMail, userMail } from 'src/config/configuration';
+import { PortafolioDto } from 'src/portafolio/dto/create-portafolio.dto';
+import { ConfigService } from '../../config/config.service';
 
 @Injectable()
-export class Mail {
+export class MailService {
+    
+  constructor(
+    private config: ConfigService
+  ){
+    
+  }
 
   msjTextSkapxd(data: PortafolioDto) {
     return `
@@ -41,8 +49,8 @@ export class Mail {
       port: 465,
       secure: true,
       auth: {
-        user: userMail,
-        pass: passMail,
+        user: this.config.userMail,
+        pass: this.config.passMail,
       },
     });
 
@@ -60,3 +68,4 @@ export class Mail {
     });
   }
 }
+

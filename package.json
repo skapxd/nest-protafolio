@@ -24,8 +24,9 @@
     "gcp": "gcloud app deploy",
     "logs": "gcloud app logs tail",
     "logs:beta": "gcloud beta app logs tail",
-    "git-push": "git push",
-    "deploy": "run-s build git-push gcp logs:beta"
+    "git-push": "git push -u origin master",
+    "gcp-init": "gcloud init",
+    "deploy": "run-s build gcp-init git-push gcp logs:beta"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
@@ -35,7 +36,9 @@
     "@nestjs/platform-express": "^7.6.15",
     "@nestjs/typeorm": "^7.1.5",
     "cache-manager": "^3.4.4",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
+    "firebase-admin": "^9.10.0",
     "html-minifier": "^4.0.0",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",

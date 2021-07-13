@@ -1,18 +1,15 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import moment from 'moment';
-import { Repository } from 'typeorm';
+import { MailService } from 'src/providers/mail/mail.service';
 import { PortafolioDto } from './dto/create-portafolio.dto';
 import { UpdatePortafolioDto } from './dto/update-portafolio.dto';
-import { Portafolio } from './entities/portafolio.entity';
-import { Mail } from 'src/mail/mail';
+import { FirebaseService } from '../providers/firebase/firebase.service';
 
 @Injectable()
 export class PortafolioService {
   constructor(
-    // @InjectRepository(Portafolio)
-    // private readonly repository: Repository<Portafolio>,
-    private readonly mail: Mail,
+    private readonly mail: MailService,
+    private readonly firebase: FirebaseService,
 
   ) { }
 
@@ -46,33 +43,20 @@ export class PortafolioService {
         msjText: this.mail.msjTextClient(data),
       });
 
+      this.firebase.fireStore.collection('contacs').add(data)
+
       // await this.repository.save(data);
 
       return {
         success: true,
       };
+
     } catch (error) {
       return {
         success: false,
         error: error.message,
       };
     }
-  }
-
-  findAll() {
-    return `This action returns all portafolio`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} portafolio`;
-  }
-
-  update(id: number, updatePortafolioDto: UpdatePortafolioDto) {
-    return `This action updates a #${id} portafolio`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} portafolio`;
   }
 
 }

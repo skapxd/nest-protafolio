@@ -2,12 +2,12 @@ import { NestFactory } from '@nestjs/core';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import { AppModule } from './app.module';
-import { ConfigService } from '@nestjs/config';
+import { ConfigService } from './config/config.service';
 
 async function bootstrap() {
 
-
-  const configService = new ConfigService();
+  const env = new ConfigService()
+  env.setEnv()
 
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   
@@ -15,7 +15,7 @@ async function bootstrap() {
   app.setBaseViewsDir(join(__dirname, '..', '/public'));
   app.setViewEngine('ejs');
   
-  const port = configService.get<string>('PORT') || 3000;
+  const port = env.port;
 
   app.disable('x-powered-by');
 

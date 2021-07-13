@@ -20,26 +20,4 @@ export class PortafolioController {
     return this.portafolioService.create(createPortafolioDto);
   }
 
-  @Get()
-  findAll() {
-    return this.portafolioService.findAll();
-  }
-
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.portafolioService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(
-    @Param('id') id: string,
-    @Body() updatePortafolioDto: UpdatePortafolioDto,
-  ) {
-    return this.portafolioService.update(+id, updatePortafolioDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.portafolioService.remove(+id);
-  }
 }

@@ -1,26 +1,26 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+// import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+// @Entity()
 export class Portafolio {
-  @PrimaryGeneratedColumn()
+  // @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  // @Column()
   correo: string;
 
-  @Column()
+  // @Column()
   telefono: string;
 
-  @Column()
+  // @Column()
   mensaje: string;
 
-  @Column()
+  // @Column()
   nombre: string;
 
-  @Column()
+  // @Column()
   nombreEmpresa: string;
 
-  @Column()
+  // @Column()
   fecha?: string;
 
   

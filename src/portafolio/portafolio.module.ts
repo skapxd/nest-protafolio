@@ -1,13 +1,15 @@
 import { Module } from '@nestjs/common';
 import { PortafolioService } from './portafolio.service';
 import { PortafolioController } from './portafolio.controller';
-import { Portafolio } from './entities/portafolio.entity';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Mail } from 'src/mail/mail';
+import { FirebaseModule } from 'src/providers/firebase/firebase.module';
+import { MailModule } from '../providers/mail/mail.module';
 
 @Module({
-  // imports: [TypeOrmModule.forFeature([Portafolio])],
+  imports: [
+    FirebaseModule,
+    MailModule
+  ],
   controllers: [PortafolioController],
-  providers: [PortafolioService, Mail],
+  providers: [PortafolioService],
 })
-export class PortafolioModule {}
+export class PortafolioModule { }
