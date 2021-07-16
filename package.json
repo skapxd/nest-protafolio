@@ -21,12 +21,12 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "dos": "loadtest -n 100000 --rps 200 -c 1000 https://allapp.app",
     "git-commit": "git commit -am 'change password email'",
-    "gcp": "gcloud app deploy",
+    "gcp": "gcloud app deploy --project portafolio-319616",
     "logs": "gcloud app logs tail",
     "logs:beta": "gcloud beta app logs tail",
     "git-push": "git push -u origin master",
     "gcp-init": "gcloud init",
-    "deploy": "run-s build gcp-init git-push gcp logs:beta"
+    "deploy": "run-s build git-push gcp logs:beta"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
