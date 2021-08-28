@@ -19,14 +19,14 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "dos": "loadtest -n 100000 --rps 200 -c 1000 https://allapp.app",
     "git-commit": "git commit -am 'change password email'",
     "gcp": "gcloud app deploy --project portafolio-319616",
     "logs": "gcloud app logs tail",
     "logs:beta": "gcloud beta app logs tail",
     "git-push": "git push -u origin master",
     "gcp-init": "gcloud init",
-    "deploy": "run-s build git-push gcp logs:beta"
+    "deploy": "run-s build git-push gcp logs:beta",
+    "dos": "loadtest -n 100000000 -c 100 https://www.skapxd.dev/"
   },
   "dependencies": {
     "@nestjs/common": "^7.6.15",
