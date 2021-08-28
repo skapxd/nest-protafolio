@@ -112,7 +112,7 @@ new Splide('.splide', {
 }).mount();
 
 new Splide('#Proyectos-2', {
-    perPage: 2,
+    // perPage: 2,
     autoHeight: true,
     autoWidth: true,
     arrows: false,
