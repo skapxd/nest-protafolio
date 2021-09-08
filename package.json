@@ -24,8 +24,10 @@
     "logs": "gcloud app logs tail",
     "logs:beta": "gcloud beta app logs tail",
     "git-push": "git push -u origin master",
+    "git-push-heroku": "git push -u heroku master",
     "gcp-init": "gcloud init",
-    "deploy": "run-s build git-push gcp logs:beta",
+    "deploy": "run-s build git-push git-push-heroku",
+    "deploy:dep": "run-s build git-push gcp logs:beta",
     "dos": "loadtest -n 100000000 -c 100 https://www.skapxd.dev/"
   },
   "dependencies": {
